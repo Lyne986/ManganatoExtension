@@ -1,0 +1,52 @@
+{
+    "name": "Manganato Alerter",
+    "description": "Alerts users when followed (manga, manhwa, manhua) new page is published",
+    "version": "1",
+    "manifest_version": 3,
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs"
+    ],
+    "host_permissions": [],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://manganato.com/manga-*",
+                "https://readmanganato.com/manga-*"
+            ],
+            "exclude_matches": [
+                "https://readmanganato.com/manga-*/chapter-*"
+            ],
+            "js": [
+                "src/followButton/index.js"
+            ],
+            "css": [
+                "src/followButton/followButton.css"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "https://readmanganato.com/manga-*/chapter-*"
+            ],
+            "js": [
+                "src/updateChapters/updateChapters.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {
+        "default_title": "ManganatoAlerter",
+        "default_icon": "ExtensionLogo.png",
+        "default_popup": "src/popup/home/home.html"
+    },
+    "icons": {
+        "16": "manganatologo.png",
+        "48": "manganatologo.png",
+        "128": "manganatologo.png"
+    }
+}
