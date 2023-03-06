@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>home</title>
+    <script type="module" src="home.js"></script>
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../navbar/navbar.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div id="navbar" class="topnav">
-      <a class="active" href="#Followed">Home</a>
-      <a href="#news">New Chapters</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <div>
-      <div id="home-manga-content">
-      </div>
-    </div>
-    <script src="home.js"></script>
+    <div include-html="../navbar/navbar.html"> </div>
+    <div id="home-manga-content"> </div>
   </body>
+    <footer>
+      <script src="../../module/include_html.js"></script>
+      <script src="../navbar/navbar.js" defer ></script>
+    </footer>
 </html>

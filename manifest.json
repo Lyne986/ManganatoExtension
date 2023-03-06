@@ -16,10 +16,12 @@
         {
             "matches": [
                 "https://manganato.com/manga-*",
-                "https://readmanganato.com/manga-*"
+                "https://readmanganato.com/manga-*",
+                "https://chapmanganato.com/manga-*"
             ],
             "exclude_matches": [
-                "https://readmanganato.com/manga-*/chapter-*"
+                "https://readmanganato.com/manga-*/chapter-*",
+                "https://chapmanganato.com/manga-*/chapter-*"
             ],
             "js": [
                 "src/followButton/index.js"
@@ -31,7 +33,8 @@
         },
         {
             "matches": [
-                "https://readmanganato.com/manga-*/chapter-*"
+                "https://readmanganato.com/manga-*/chapter-*",
+                "https://chapmanganato.com/manga-*/chapter-*"
             ],
             "js": [
                 "src/updateChapters/updateChapters.js"

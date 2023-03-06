@@ -1,5 +1,7 @@
 const key = "manga-followed-by-user"
-const baseUrl = "https://readmanganato.com/"
+const baseUrl = document.URL.substring(0, document.URL.indexOf("manga-"));
+// console.log("NEW URL" + document.URL.substring(0, document.URL.indexOf("manga-")));
+
 
 function getItem(key) {
     return new Promise((resolve) => {
@@ -59,7 +61,6 @@ async function getMangaObject() {
     console.log(image);
     console.log(title);
 
-    // create object with mangaCode as key
     let mangaObj = {
         "mangaCode": mangaCode,
         "title": title,
@@ -99,7 +100,6 @@ async function followOrUnfollow(button) {
     console.log("FOLLOW SCRIPT");
     let item = await getItem(key);
     let mangaObj;
-    console.log(item.length);
     console.log(item);
 
     try {
@@ -205,7 +205,6 @@ async function onPageLoad() {
     } else {
         addButton("Follow");
     }
-    // setItem(key, JSON.stringify({}));
 }
 
 onPageLoad();
