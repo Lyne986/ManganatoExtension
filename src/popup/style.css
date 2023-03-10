@@ -1,0 +1,12 @@
+body {
+    overflow-y: scroll;
+}
+
+.scroll {
+    text-align: center;
+    overflow-y: auto;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

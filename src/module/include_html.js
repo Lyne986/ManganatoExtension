@@ -1,6 +1,5 @@
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
-    console.log("Including navbar")
     z = document.getElementsByTagName("*");
     for (i = 0; i < z.length; i++) {
         elmnt = z[i];
